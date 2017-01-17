@@ -1,0 +1,31 @@
+doctype html
+html(lang="es")
+	head
+		//- Basic Needs
+		meta(charset="UTF-8")
+		title Luis Osnet
+		meta(name="description" content="")
+		meta(name="author" content="Luis Osnet")
+		//- Favicons
+		link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='../public/images/logos/favicon.ico')
+		link(rel="apple-touch-icon-precomposed", sizes="144x144", href="../public/images/apple/iPadRetina.png")
+		link(rel="apple-touch-icon-precomposed", sizes="114x114", href="../public/images/apple/iPhoneRetina.png")
+		link(rel="apple-touch-icon-precomposed", sizes="72x72", href="../public/images/apple/iPad.png")
+		link(rel="apple-touch-icon-precomposed", sizes="57x57", href="../public/images/apple/iPhone.png")
+		//- Humans
+		link(type="text/plain" rel="author" href="http://luisosnet.com/public/docs/humans.txt")
+		meta(name="Copyright" content="http://luisosnet.com")
+		meta(name="robots" content="all")
+		//- Mobile Specific Metas
+		meta(name="viewport", content="width=device-width, minimum-scale=1, maximum-scale=1")
+		meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+		//- CSS
+		link(rel="stylesheet", type="text/css" href="./public/css/style.css")
+		link(rel="stylesheet", type="text/css" href="./public/css/normalize.css")
+	body
+		include ./header/template.jade
+		include ./landing/template.jade
+		include ./about/template.jade
+		include ./skills/template.jade
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js")
+		script(src="./public/js/script.js", type="text/javascript")

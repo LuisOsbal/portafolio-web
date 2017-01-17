@@ -1,0 +1,135 @@
+.Navbar
+	height height4half
+	width 100%
+	position fixed
+	top 0
+	right 0
+	left 0
+	z-index 3
+	&-logoContainer
+		display inline-block
+		line-height 4.5em
+		height 4.5em
+		margin-left 1.5em
+	&-logo
+		font-size 2em
+		font-family 'Quicksand', sans-serif
+		text-decoration none
+		font-weight 400
+		color white
+	&-mobileContainer
+		display inline-block
+		float right
+		height height4half
+		line-height height4half
+		padding 0 1em
+		margin-right .5em
+	&-mobileButton
+		background-color transparent
+		border 0
+		border-bottom .30em solid white
+		border-top .30em solid white
+		cursor pointer
+		font-size 1em
+		height 1.5em
+		padding .5em
+		outline 0
+		position relative
+		width 2em
+		vertical-align middle
+		z-index 3
+		&::after,
+		&::before
+			border-bottom .30em solid white
+			bottom .375em
+			content ''
+			height 0
+			left 0
+			position absolute
+			right 0
+	&-list-container
+		overflow-y scroll
+		overflow-x hidden
+		background rgba(0, 0, 0, .9)
+		position fixed
+		top 4.5em
+		margin 0
+		height 100vh
+		padding 0
+		width 80%
+		left -80%
+		transition .3s
+		box-shadow 5px 0 5px -3px rgba(50, 50, 50, 0.61)
+		&.isActive
+			left 0
+	&-list
+		list-style none
+		padding 0
+		margin 0
+		display block
+		height 130%
+		// font-family 'Quicksand', sans-serif
+		// font-weight 300
+		// overflow-y scroll
+		// height 100vh
+		// background rgba(0, 0, 0, .9)
+		// position fixed
+		// top 4.5em
+		// width 80%
+		// left -80%
+		// transition .3s
+		// box-shadow 5px 0 5px -2px rgba(50, 50, 50, 0.61)
+		// &.isActive
+		// 	left 0
+	&-item
+		display block
+		text-align center
+		border-bottom 1px solid #333
+		// padding 1.5em 0
+		&:hover
+			background rgba(0, 0, 0, .9)
+	&-link
+		text-decoration none
+		font-size 1em
+		color #FFF
+		display block
+		cursor pointer
+		padding 1.5em 0
+		&:hover
+			color #27a2db
+.backgroundNav
+	background white
+	border-bottom 2px solid #27a2db
+	transition .4s
+.blackColor
+	color #222
+.colorMobileButton
+	border-bottom .30em solid #222
+	border-top .30em solid #222
+	&::after,
+	&::before
+		border-bottom .30em solid #222
+.isActive
+	border-color transparent
+	&::after,
+	&::before
+		transition transform 200ms ease-out
+	&::after
+		transform rotateZ(45deg)
+	&::before
+		transform rotateZ(-45deg)
+@media screen and (min-width 768px)
+	.Navbar
+		// border-bottom 1px solid #27a2db
+		&-logoContainer
+			margin-left 2em
+		&-mobileButton
+			margin-right 1em
+		&-list-container
+			width 40%
+			left -40%
+@media screen and (min-width 1024px)
+	.Navbar
+		&-list-container
+			width 25%
+			left -25%
